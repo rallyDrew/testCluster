@@ -1,3 +1,5 @@
+git pull
+
 WHO=$(whoami)
 TCLOCKFILE=cluster.$1
 
@@ -15,3 +17,8 @@ else
   echo "$1 is already locked by $LOCKEDBY"
   exit 1
 fi
+
+
+git add .
+git commit -m "$WHO locked $1"
+git push
