@@ -6,5 +6,8 @@ for f in cluster.*; do
   echo "$f $whoOwns <br/>" >> README.MD
 done
 
+git add README.MD
+git commit -m "Updated readme on GitHub"
+git push
 cat README.MD
 
