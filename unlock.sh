@@ -15,9 +15,9 @@ if [ -a $LOCKEDBY ]; then
   exit 0
 else
   echo "" > $TCLOCKFILE
-  git add .
+  git add . > gitlog.txt
   git commit -m "$WHO unlocked $1"
-  git push --quiet
+  git push --quiet > gitlog.txt
 
 fi
 
