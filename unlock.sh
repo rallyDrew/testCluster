@@ -22,4 +22,4 @@ fi
 
 git add .
 git commit -m "$WHO unlocked $1"
-git push
+git push --quiet
