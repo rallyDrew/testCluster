@@ -18,6 +18,7 @@ else
   exit 1
 fi
 
+./status.sh
 
 git add .
 git commit -m "$WHO locked $1"

@@ -18,6 +18,8 @@ else
   echo "$1 is now unlocked"
 fi
 
+./status.sh
+
 git add .
 git commit -m "$WHO unlocked $1"
 git push
