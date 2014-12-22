@@ -1,4 +1,4 @@
-git pull -q 2>/dev/null
+git pull --quiet
 
 echo "<b>Current status of test clusters</b> <br/>" > README.MD
 for f in cluster.*; do
