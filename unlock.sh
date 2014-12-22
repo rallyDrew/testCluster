@@ -1,3 +1,5 @@
+git pull
+
 WHO=$(whoami)
 TCLOCKFILE=cluster.$1
 
@@ -15,3 +17,7 @@ else
   echo "" > $TCLOCKFILE
   echo "$1 is now unlocked"
 fi
+
+git add .
+git commit -m "$WHO unlocked $1"
+git push
