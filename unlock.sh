@@ -1,4 +1,4 @@
-git pull
+git pull > gitlog.txt
 
 WHO=$(whoami)
 TCLOCKFILE=cluster.$1
