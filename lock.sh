@@ -11,7 +11,6 @@ fi
 LOCKEDBY=$(cat $TCLOCKFILE)
 
 if [ -a $LOCKEDBY ]; then
-  echo "All Yours!"
   echo $WHO > $TCLOCKFILE
 else
   echo "$1 is already locked by $LOCKEDBY"
