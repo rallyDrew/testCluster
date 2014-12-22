@@ -12,6 +12,10 @@ LOCKEDBY=$(cat $TCLOCKFILE)
 
 if [ -a $LOCKEDBY ]; then
   echo $WHO > $TCLOCKFILE
+  git add .
+  git commit -m "$WHO locked $1"
+  git push --quiet
+
 else
   echo "$1 is already locked by $LOCKEDBY"
   exit 1
@@ -19,6 +23,3 @@ fi
 
 ./status.sh
 
-git add .
-git commit -m "$WHO locked $1"
-git push --quiet

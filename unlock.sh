@@ -15,11 +15,11 @@ if [ -a $LOCKEDBY ]; then
   exit 0
 else
   echo "" > $TCLOCKFILE
-  echo "$1 is now unlocked"
+  git add .
+  git commit -m "$WHO unlocked $1"
+  git push --quiet
+
 fi
 
 ./status.sh
 
-git add .
-git commit -m "$WHO unlocked $1"
-git push --quiet
