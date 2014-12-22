@@ -1,6 +1,6 @@
 git pull --quiet
 
-echo "<b>Current status of test clusters</b> <br/>" > README.MD
+echo "<b>Current status of test clusters. Use lock, unlock, and status.sh scripts</b> <br/>" > README.MD
 for f in cluster.*; do
   whoOwns=$(cat $f)
   echo "$f $whoOwns <br/>" >> README.MD
